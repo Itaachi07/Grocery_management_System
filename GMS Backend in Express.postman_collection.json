@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "d4815aff-dee6-442c-a8e5-bcb2b1bbf3e9",
+		"name": "GMS Backend in Express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21151178"
+	},
+	"item": [
+		{
+			"name": "Contact Us for any Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Ratan1\",\r\n     \"email\":\"ratan@gmail.com\",\r\n      \"mobile\":\"8757459521\", \r\n      \"message\":\"good website\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/contact_us",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"contact_us"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup for customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"c_city\":\"Pune\",\r\n    \"c_state\":\"Maharashtra\",\r\n    \"c_pincode\":401285,\r\n    \"c_address\":\"adasd\",\r\n    \"c_fname\":\"Ramesh\",\r\n    \"c_lname\":\"Pawar\",\r\n    \"c_email\":\"ramesh@gmail.com\",\r\n    \"c_mobile\":\"7814752364\",\r\n    \"c_password\":\"free\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/signup",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get particular Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn Auth for Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"c_email\":\"rakesh@gmail.com\",\r\n    \"c_password\":\"free\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/signin_auth",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"signin_auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/products/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products from particular Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/products/categories/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products",
+						"categories",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Product By Name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImNfaWQiOjUsImNfZm5hbWUiOiJSYW1lc2giLCJjX2xuYW1lIjoiUGF3YXIiLCJjX2VtYWlsIjoicmFtZXNoQGdtYWlsLmNvbSIsImNfbW9iaWxlIjoiNzgxNDc1MjM2NCIsImNfYWRkcmVzcyI6ImFkYXNkIiwiY19waW5jb2RlIjo0MDEyODUsImNfY2l0eSI6IlB1bmUiLCJjX3N0YXRlIjoiTWFoYXJhc2h0cmEifSwiaWF0IjoxNjYzMDcwNjc3LCJleHAiOjE2NjMxNTcwNzd9.XvpfYaC55yoUyhV__8GPoWSe3oh4qqwmyUCqEFyaTdM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"p_name\":\"a\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Checkout order id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJjX2lkIjo3LCJjX2ZuYW1lIjoiUmFrZXNoIiwiY19sbmFtZSI6IlBhdGlsIiwiY19lbWFpbCI6InJha2VzaEBnbWFpbC5jb20iLCJjX21vYmlsZSI6Ijk4MTQ3NTIzNjQiLCJjX2FkZHJlc3MiOiJNYXRydSBCaGFrdGkiLCJjX3BpbmNvZGUiOjQxMTAyMSwiY19jaXR5IjoiUHVuZSIsImNfc3RhdGUiOiJNYWhhcmFzaHRyYSJ9LCJpYXQiOjE2NjMwODgyMTAsImV4cCI6MTY2MzE3NDYxMH0.mb3aMFmeIB1tNbXfKbXFEzWT4MRgG2mlva3IGJbX8FM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"c_id\":1,\r\n    \"o_date\":\"2022-05-05\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/customer/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"customer",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checkout with Order Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"o_id\":11,\r\n    \"p_id\":5,\r\n    \"s_id\":1,\r\n    \"p_qty\":5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/customer/order_details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"customer",
+						"order_details"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:4000/customer",
+			"type": "string"
+		}
+	]
+}

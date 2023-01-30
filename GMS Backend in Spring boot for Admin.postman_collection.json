@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "255e50e3-ddb1-4851-b5cc-c4976880eeac",
+		"name": "GMS Backend in Spring boot for Admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21151178"
+	},
+	"item": [
+		{
+			"name": "Get All Sellers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admin/sellers_list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"sellers_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Seller",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"s_name\":\"Bharat\",\r\n    \"s_email\":\"bharat@gmail.com\",\r\n    \"s_mobile\":\"8745698745\",\r\n    \"s_password\":\"1234\",\r\n    \"s_pincode\":401201,\r\n    \"s_city\":\"Nashik\",\r\n    \"s_state\":\"MH\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/sellers/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"sellers",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admin/products_list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"products_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admin/customers_list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"customers_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Seller",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admin/sellers/delete/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"sellers",
+						"delete",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admin/products/delete/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"products",
+						"delete",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admin/customers/delete/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"customers",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"c_id\": 1,\r\n    \"c_fname\": \"Pratik\",\r\n    \"c_lname\": \"Satpute\",\r\n    \"c_email\": \"pratik@gmail.com\",\r\n    \"c_mobile\": \"785200255\",\r\n    \"c_password\": \"12345\",\r\n    \"c_address\": \"Satara\",\r\n    \"c_pincode\": 401280,\r\n    \"c_city\": \"Satara\",\r\n    \"c_state\": \"MH\",\r\n    \"deleted\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/customers/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"customers",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Seller",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"s_name\":\"Makarand\",\r\n    \"s_email\":\"mk@gmail.com\",\r\n    \"s_mobile\":\"8111111111\",\r\n    \"s_password\":\"123456\",\r\n    \"s_pincode\":{\r\n        \"pincode\":411010\r\n\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/sellers/update/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"sellers",
+						"update",
+						"20"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
